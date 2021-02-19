@@ -62,6 +62,7 @@
     <Compile Include="Risk\LowRisk.cs" />
     <Compile Include="Risk\MediumRisk.cs" />
     <Compile Include="Trades\ITrade.cs" />
+    <Compile Include="Trades\Trade.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

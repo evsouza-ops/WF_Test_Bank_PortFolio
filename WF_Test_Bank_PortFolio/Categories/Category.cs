@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WF_Test_Bank_PortFolio.Risk;
+using WF_Test_Bank_PortFolio.Trades;
+using WF_Test_Bank_PortFolio.Categories;
+
 
 namespace WF_Test_Bank_PortFolio.Categories
 {
@@ -22,18 +26,18 @@ namespace WF_Test_Bank_PortFolio.Categories
             List<string> tradeCategories = new List<string>();
 
             List<IRisk> risks = new List<IRisk> {
-                RiskFactory.Create(TypeRisk.LowRisk),
-                RiskFactory.Create(TypeRisk.MediumRisk),
-                RiskFactory.Create(TypeRisk.HighRisk)
+                FactoryRisk.Create(TypeRisk.LowRisk),
+                FactoryRisk.Create(TypeRisk.MediumRisk),
+                FactoryRisk.Create(TypeRisk.HighRisk)
             };
 
             foreach (Trade trade in portfolio)
             {
-                foreach (IRisk r in risks)
+                foreach (IRisk risco in risks)
                 {
-                    risk = r;
+                    risk = risco;
 
-                    if (trade.CalculateRisk(r))
+                    if (trade.CalculaRisk(risco))
                     {
                         break;
                     }

@@ -12,3 +12,4 @@ namespace WF_Test_Bank_PortFolio.Trades
         string ClientSector { get; }
     }
 }
+

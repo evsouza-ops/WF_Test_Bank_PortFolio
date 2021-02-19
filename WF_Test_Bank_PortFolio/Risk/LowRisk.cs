@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WF_Test_Bank_PortFolio.Trades;
 
 namespace WF_Test_Bank_PortFolio.Risk
 {
@@ -10,7 +11,7 @@ namespace WF_Test_Bank_PortFolio.Risk
     {
         public string Type { get; private set; }
 
-        public bool CalculateRisk(ITrade trade)
+        public bool CalculaRisk(ITrade trade)
         {
             if (trade.Value < 1000000 && trade.ClientSector.Equals(SectorRisk.Public.ToString()))
             {
